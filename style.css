@@ -1,0 +1,261 @@
+:root{
+    --Red: hsl(0, 100%, 68%);
+    --Very-Dark-Blue: hsl(230, 29%, 20%);
+    --Dark-Grayish-Blue: hsl(230, 11%, 40%);
+    --Grayish-Blue: hsl(231, 7%, 65%);
+    --Light-Grayish-Blue: hsl(207, 33%, 95%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width:100%; 
+    padding: 0px 0 30px;  
+    text-align: left;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:30px 20px;
+    margin:0 0 10px 0;
+    position: relative;
+    text-align: center;
+}
+
+header img{
+    cursor: pointer;
+}
+
+header nav{
+   background-color: #fff;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.329);
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    top:100px;
+    width:90%;
+    padding:20px 0;
+    z-index: 2;
+    display: none;
+}
+
+header nav h4{
+    text-transform: uppercase;
+    color: var(--Very-Dark-Blue);
+    padding:20px 10px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+header nav h4:hover{
+    text-decoration: underline;
+}
+
+.login{
+    color: var(--Grayish-Blue);
+    border-top:2px solid var(--Grayish-Blue);
+    margin:0 30px;
+    cursor: pointer;
+}
+
+.close{
+    display:none;
+    cursor: pointer;
+}
+
+header div{
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: -1;
+    background-color:var(--Light-Grayish-Blue);
+    padding:220px 90px;
+    border-radius: 0 0 0 50px;
+}
+
+article{
+    padding:50px 20px 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+article img{
+    width:150%;
+    position: relative;
+    right:20px;
+    padding:0 0 50px;
+}
+
+article section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:30px 0 20px;
+    text-transform: uppercase;
+}
+
+article section small{
+    background-color: var(--Very-Dark-Blue);
+    padding:5px 10px;
+    color:#fff;
+    margin:0 15px 0 0;
+    border-radius:20px;
+}
+
+article section p{
+    letter-spacing: .15rem;
+    font-size: 15px;
+}
+
+h2{
+    font-size: 30px;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 1.9rem;
+    margin:20px 0;
+    color:var(--Very-Dark-Blue)
+}
+
+article p{
+    font-size:23px;
+    text-align: left;
+    line-height: 1.7rem;
+    color:var(--Grayish-Blue)
+}
+
+article aside{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px 0;
+    text-align: left;
+    
+}
+
+article button{
+    padding:10px;
+    color:#fff;
+    text-transform: uppercase;
+    background-color: var(--Red);
+    border:none;
+    border-radius: 5px;
+    font-size:10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+article button:hover{
+    opacity: .7;
+}
+
+article aside p{
+    font-size:15px;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width:700px) {
+    body{
+        text-align: center;
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hamburger,
+    .close{
+        display: none;
+    }
+
+    header{
+        justify-content: space-between;
+    }
+
+    header nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top:0;
+        left:0;
+        background: none;
+        box-shadow: none;
+        width:auto
+    }
+
+    header div{
+        padding:200px 300px;
+    }
+
+    .login{
+        border:none;
+    }
+
+    article p,h2,aside{
+        text-align: center;
+        /* border:2px solid black; */
+        /* padding:30px 340px 20px 20px; */
+    }
+
+    article aside{
+        justify-content: center;
+    }
+
+    article aside button{
+        margin:0 25px 0 0;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    header div{
+        padding:250px 340px;
+    }
+
+    article{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    article img{
+        width:90%;
+        position: relative;
+        right:-300px;
+    }
+
+    article section{
+        justify-content: flex-start;
+    }
+
+    article div{
+        position: absolute;
+        left:10px;
+        width:40%;
+        padding:30px 90px 20px 20px; 
+        /* border:2px solid black; */
+        text-align: left;
+    }
+
+    article p,
+    h2{
+        text-align: left;
+    }
+
+    article aside{
+        justify-content:flex-start;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    header div{
+        padding: 250px 33%;
+    }
+}
